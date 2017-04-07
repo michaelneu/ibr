@@ -7,11 +7,13 @@
   "license": "GPL",
   "dependencies": {
     "readline-sync": "^1.4.7",
+    "sprintf-js": "^1.0.3",
     "yargs": "^7.0.2"
   },
   "devDependencies": {
     "@types/node": "^7.0.12",
     "@types/readline-sync": "^1.4.1",
+    "@types/sprintf-js": "^0.0.27",
     "@types/yargs": "^6.6.0",
     "ts-node": "^3.0.2",
     "typescript": "^2.2.2"

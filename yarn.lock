@@ -10,6 +10,10 @@
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@types/readline-sync/-/readline-sync-1.4.1.tgz#257afe2a793e846f55c24c3452f3051c3ce5a14d"
 
+"@types/sprintf-js@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@types/sprintf-js/-/sprintf-js-0.0.27.tgz#aa82c1ed9a068d367ca128918561b348bd30fa1a"
+
 "@types/yargs@^6.6.0":
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-6.6.0.tgz#91f8e2580a8083049f78311c059aa57d6949df6b"
@@ -268,6 +272,10 @@ spdx-expression-parse@~1.0.0:
 spdx-license-ids@^1.0.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
+
+sprintf-js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"

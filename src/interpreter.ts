@@ -1,3 +1,4 @@
+import { REPL } from "./repl";
 import { Console } from "./console";
 import { Memory } from "./memory";
 
@@ -27,6 +28,29 @@ export class Interpreter {
   public constructor() {
     this.memory = new Memory();
     this.pointer = 0;
+  }
+
+  /**
+   * Gets the pointer's current address.
+   */
+  public get pointerAddress() : number {
+    return this.pointer;
+  }
+
+  /**
+   * Gets the current value at the pointer's address.
+   */
+  public get pointerByteValue() : number {
+    return this.memory.getMemoryValue(this.pointer);
+  }
+
+  /**
+   * Gets the current char at the pointer's address.
+   */
+  public get pointerCharValue() : string {
+    const byte = this.pointerByteValue;
+
+    return String.fromCharCode(byte);
   }
 
   /**
@@ -66,6 +90,12 @@ export class Interpreter {
     return buffer;
   }
 
+  /**
+   * Displays a repl (read-execute-print-loop) for the brainf*ck interpreter.
+   */
+  public repl() : void {
+    new REPL(this).run();
+  }
 
   /**
    * Runs the given brainf*ck code.
@@ -95,8 +125,7 @@ export class Interpreter {
           break;
 
         case ".":
-          const byte = this.memory.getMemoryValue(this.pointer),
-                char = String.fromCharCode(byte);
+          const char = this.pointerCharValue;
         
           Console.writeChar(char);
           break;
@@ -119,7 +148,10 @@ export class Interpreter {
           }
 
           index--;
+          break;
 
+        case "#":
+          this.repl();
           break;
 
         default:
