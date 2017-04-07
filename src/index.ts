@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
 import { Interpreter } from "./interpreter";
+import { REPL } from "./repl";
 import * as fs from "fs";
 import * as yargs from "yargs";
 
-const argv = yargs.usage("Usage: $0 [options] [file]")
-                     .describe("help", "shows this help")
-                     .alias("help", "h")
-                     .argv;
+const argv = yargs.usage("Usage: $0 [file]")
+                  .describe("help", "shows this help")
+                  .alias("help", "h")
+                  .argv;
 
 const unnamedArguments = argv._;
 
@@ -21,5 +22,6 @@ if (unnamedArguments.length == 1) {
   interpreter.run(code);
   console.log();
 } else {
-  yargs.showHelp();
+  const repl = new REPL();
+  repl.run();
 }
