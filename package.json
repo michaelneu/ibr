@@ -1,0 +1,23 @@
+{
+  "name": "ibr",
+  "version": "1.0.0",
+  "description": "an interactive brainf*ck repl",
+  "main": "lib/index.js",
+  "author": "michaelneu",
+  "license": "GPL",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "readline-sync": "^1.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "@types/optimist": "^0.0.29",
+    "@types/readline-sync": "^1.4.1",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  }
+}
