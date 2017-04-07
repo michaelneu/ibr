@@ -2,9 +2,9 @@
 
 import { Interpreter } from "./interpreter";
 import * as fs from "fs";
-import * as optimist from "optimist";
+import * as yargs from "yargs";
 
-const argv = optimist.usage("Usage: $0 [options] [file]")
+const argv = yargs.usage("Usage: $0 [options] [file]")
                      .describe("help", "shows this help")
                      .alias("help", "h")
                      .argv;
@@ -21,5 +21,5 @@ if (unnamedArguments.length == 1) {
   interpreter.run(code);
   console.log();
 } else {
-  optimist.showHelp();
+  yargs.showHelp();
 }
